@@ -1,0 +1,33 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+}
+
+.largerInputCont {
+  display: flex;
+}
+
+.listData {
+  display: flex;
+}
+
+.editBtn {
+  border: 1px solid lightblue;
+  border-radius: 16px;
+  background-color: lightblue;
+}
+.editBtn:hover {
+  cursor: pointer;
+}
+
+.deleteBtn {
+  border: 1px solid red;
+  border-radius: 50%;
+  background-color: red;
+}
+.deleteBtn:hover {
+  cursor: pointer;
+}
