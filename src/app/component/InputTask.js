@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./inputCss.css";
 
-const InputTask = () => {
+const InputTask = ({ refresh, setRefresh }) => {
   const [userInput, setUserInput] = useState("");
 
   const onChange = (e) => {
@@ -22,6 +22,7 @@ const InputTask = () => {
       });
 
       if (response.ok) {
+        setRefresh(!refresh);
         setUserInput("");
       } else {
         console.error("Error adding task:", await response.json());

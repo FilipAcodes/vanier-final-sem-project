@@ -3,8 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./inputCss.css";
 import Modal from "./modal";
 
-const ToDoOutput = () => {
-  const [data, setData] = useState([]);
+const ToDoOutput = ({ data, setData }) => {
   const [selectedTask, setSelectedTask] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
