@@ -19,7 +19,9 @@ const ToDoOutput = ({ data, setData }) => {
       })
       .catch((error) => console.error("Error fetching tasks:", error));
   };
-
+  const onClose = () => {
+    setIsModalOpen(false);
+  };
   const deleteTask = (id) => {
     const confirmed = window.confirm(
       "Are you sure you want to delete this task?"
@@ -79,7 +81,7 @@ const ToDoOutput = ({ data, setData }) => {
       <Modal
         isOpen={isModalOpen}
         reFetch={fetchTasks}
-        onClose={() => setIsModalOpen(false)}
+        onClose={onClose}
         selectedTask={selectedTask}
         onUpdate={updateTask}
         setData={setData}

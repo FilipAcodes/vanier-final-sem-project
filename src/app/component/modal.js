@@ -7,7 +7,15 @@ const Modal = ({ isOpen, onClose, selectedTask, onUpdate, reFetch }) => {
 
   const handleEdit = () => {
     onUpdate(selectedTask[0], editedTask);
+    fetchData();
+    setEditedTask("");
+    onClose();
+  };
+  const fetchData = async () => {
     reFetch();
+  };
+
+  const closeModal = () => {
     setEditedTask("");
     onClose();
   };
@@ -20,8 +28,8 @@ const Modal = ({ isOpen, onClose, selectedTask, onUpdate, reFetch }) => {
         <div className={modalClassName}>
           <div className="modal-content">
             <div className="modal-header">
-              <h2>Edit Task</h2>
-              <button className="close-btn" onClick={onClose}>
+              <h1>Edit Task</h1>
+              <button className="close-btn" onClick={closeModal}>
                 &times;
               </button>
             </div>
