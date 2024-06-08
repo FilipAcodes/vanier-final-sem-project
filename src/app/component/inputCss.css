@@ -32,6 +32,7 @@
 }
 .editBtn:hover {
   cursor: pointer;
+  filter: invert(1);
 }
 
 .deleteBtn {
@@ -41,4 +42,5 @@
 }
 .deleteBtn:hover {
   cursor: pointer;
+  filter: invert(1);
 }
