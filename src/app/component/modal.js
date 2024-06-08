@@ -8,6 +8,7 @@ const Modal = ({ isOpen, onClose, selectedTask, onUpdate, reFetch }) => {
   const handleEdit = () => {
     onUpdate(selectedTask[0], editedTask);
     reFetch();
+    setEditedTask("");
     onClose();
   };
 

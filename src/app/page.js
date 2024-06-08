@@ -19,14 +19,16 @@ export default function Home() {
 
   return (
     <main>
-      <div className="mainContainer">
-        <InputTask setRefresh={setRefresh} refresh={refresh} />
-        <ToDoOutput
-          data={data}
-          setData={setData}
-          setRefresh={setRefresh}
-          refresh={refresh}
-        />
+      <div className="background">
+        <div className="mainContainer">
+          <InputTask setRefresh={setRefresh} refresh={refresh} />
+          <ToDoOutput
+            data={data}
+            setData={setData}
+            setRefresh={setRefresh}
+            refresh={refresh}
+          />
+        </div>
       </div>
     </main>
   );

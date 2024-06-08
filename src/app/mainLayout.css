@@ -3,10 +3,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 80vh;
-  width: 80vw;
+  height: 40vh;
+  width: 40vw;
   display: flex;
   justify-content: space-evenly;
   border: 3px solid black;
   border-radius: 26px;
+  background-color: pink;
+}
+
+.background {
+  background-image: url("../../public/assets/bgimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
 }
