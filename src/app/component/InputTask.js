@@ -40,7 +40,7 @@ const InputTask = ({ refresh, setRefresh }) => {
   return (
     <div className="largerInputCont">
       <form className="inputContainer" onSubmit={onSubmit}>
-        <label htmlFor="input">Insert a todo</label>
+        <label htmlFor="input">Insert a task.</label>
         <input type="text" value={userInput} id="input" onChange={onChange} />
         <button type="submit">Add</button>
       </form>

@@ -21,6 +21,7 @@ export default function Home() {
     <main>
       <div className="background">
         <div className="mainContainer">
+          <h1>To-do List</h1>
           <InputTask setRefresh={setRefresh} refresh={refresh} />
           <ToDoOutput
             data={data}

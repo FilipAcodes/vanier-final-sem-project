@@ -21,6 +21,11 @@ const ToDoOutput = ({ data, setData }) => {
   };
 
   const deleteTask = (id) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this task?"
+    );
+    if (!confirmed) return;
+
     fetch(`/api/deleteTask/${id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then((data) => {
@@ -62,12 +67,12 @@ const ToDoOutput = ({ data, setData }) => {
     <div className="inputContainer">
       {data.map((task) => (
         <div className="listData" key={task[0]}>
-          <li>{task[1]}</li>
+          <ul className="task">{task[1]}</ul>
           <button className="editBtn" onClick={() => handleEditTask(task[0])}>
             Edit
           </button>
           <button className="deleteBtn" onClick={() => deleteTask(task[0])}>
-            X
+            &times;
           </button>
         </div>
       ))}

@@ -4,6 +4,13 @@
   justify-content: center;
   text-align: center;
   overflow: auto;
+  width: 90%;
+  max-width: 90%;
+  max-height: 230px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 11px;
+  padding: 5px;
 }
 
 .largerInputCont {
@@ -12,12 +19,16 @@
 
 .listData {
   display: flex;
+  justify-content: space-around;
+}
+.task {
+  flex-grow: 1;
 }
 
 .editBtn {
-  border: 1px solid lightblue;
+  border: 1px solid #007bff;
   border-radius: 16px;
-  background-color: lightblue;
+  background-color: #007bff;
 }
 .editBtn:hover {
   cursor: pointer;

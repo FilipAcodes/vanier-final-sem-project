@@ -6,9 +6,11 @@
   height: 40vh;
   width: 40vw;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   border: 3px solid black;
   border-radius: 26px;
+  align-items: center;
   background-color: pink;
 }
 
@@ -19,4 +21,9 @@
   background-position: center;
   width: 100vw;
   height: 100vh;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: bold;
 }
