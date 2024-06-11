@@ -1,18 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./modal.css";
 
 const Modal = ({ isOpen, onClose, selectedTask, onUpdate, reFetch }) => {
-  const [editedTask, setEditedTask] = useState(selectedTask?.[1] || "");
-
-  const handleEdit = () => {
-    onUpdate(selectedTask[0], editedTask);
-    fetchData();
-    setEditedTask("");
-    onClose();
-  };
-  const fetchData = async () => {
-    reFetch();
+  const [editedTask, setEditedTask] = useState("");
+  // to force refresh
+  useEffect(() => {
+    if (selectedTask) {
+      setEditedTask(selectedTask[1]);
+    }
+  }, [selectedTask]);
+  // changed to async
+  const handleEdit = async () => {
+    if (selectedTask) {
+      await onUpdate(selectedTask[0], editedTask);
+      await reFetch();
+      setEditedTask("");
+      onClose();
+    }
   };
 
   const closeModal = () => {
